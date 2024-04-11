@@ -232,7 +232,7 @@ def trainTestCycle(X, y, columns):
             scores[model][theModel]["test"]["scores"]["recall"] = recall_score(y_test, y_pred_test)
             scores[model][theModel]["train"]["scores"]["f1"] = f1_score(y_train, y_pred_train)
             scores[model][theModel]["test"]["scores"]["f1"] = f1_score(y_test, y_pred_test)
-            if modelData['featureImportance'] == True:
+            if MLModels.models[model]['featureImportance'] == True:
                 scores[model][theModel]["featureImportances"] = theEstimator.named_steps['regressor'].feature_importances_
     
     return results, scores

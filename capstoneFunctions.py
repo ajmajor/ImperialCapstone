@@ -119,7 +119,7 @@ class MLModels():
                 "regressor__C": C,
                 "regressor__kernel": kernels
             },
-            "featureImportance": True
+            "featureImportance": False
         }
     }
 

@@ -47,7 +47,7 @@
 
 * Given the small number of features, there are no other uses for which the dataset might be suitable which come to mind.
 * No information is given about the way the dataset was collected and preprocessed/cleaned/labeled, and how that might impact future uses. There is potential that the dataset could result in unfair treatment of groups such as stereotyping in as much as there are columns indicating gender, bank balance and country of origin which might allow the unintended generalisation of data for those groups.
-* Are there tasks for which the dataset should not be used? If so, please provide a description.
+* There are no listed purposes on Kaggle for which the dataset should not be used; any use intended to generalise or discriminate against identifiable groupings of people based on country of residence, bank balance or gender should be strongly discouraged.
 
 ## Distribution
 

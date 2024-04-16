@@ -36,7 +36,7 @@ The technical details of why these were selected and how they work need not be c
 ## DATA
 
 * The dataset is available for download on Kaggle [here](https://www.kaggle.com/datasets/saurabhbadole/bank-customer-churn-prediction-dataset/data); it is made available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-* The data consists of 10,000 rows of data, ultimately reduced to nine features per row:
+* The data used in this model consists of 10,000 rows of data, ultimately reduced to nine features per row:
   * **CreditScore:** The credit score of the customer.
   * **Gender_Male:** Whether the customer is male (binary: yes/no).
   * **Age:** The age of the customer.

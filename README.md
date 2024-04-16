@@ -6,7 +6,7 @@ Submitted by: Andrew Major
 
 The idea of the project is to produce a machine learning model that will help detect customers who are likely to churn. The strategy can be simply broken down into the following steps:
 
-* **Data Collection**: Gather historical customer data, including features such as account balance, transaction frequency, customer demographics, etc.
+* **Data Collection**: Gather historical customer data, including features such as account balance, credit score, customer demographics, etc.
 * **Data Cleaning**: Handle missing values (impute or drop), remove irrelevant features, check for duplicates etc.
 * **Data Exploration**: Understand the distribution of features and identify potential outliers ('rogue values').
 

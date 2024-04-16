@@ -46,12 +46,21 @@ A summary of the model you’re using and why you chose it.
 The chosen hyperparameter optimisation strategy was to use the scikit-learn GridSearchCV and RandomizedGridSearchCV functions; although this is effectively a duplication of effort, I was interested to see how well the random search compared to a full grid search, both in terms of time and optimisation results. In the end, RandomizedSearchCV seemed to hit upon the same optimisation values as the brute force search, with reduced computing overheads (confirming what had been researched online).
 The hyperparameters to be optimised, along with their eventual values are:
 
-* **hyperparameter 1**: value one
-* **hyperparameter 2**: value 2
+* **max_depth**: None
+* **n_estimators**: 100
 
 ## RESULTS
 
-A summary of your results and what you can learn from your model
+As it stands, the best performing model is far from ideal. The plot below shows the comparison of F1 scores achieved in cross-validation training and hold-out validation.
 
-You can include images of plots using the code below:
 ![Screenshot](F1_Comparison.png)
+
+The highest achieved training F1 score was 0.539263, with a corresponding validation score of 0.550544, recorded by the Random Forest Regressor. The confusion Matrix is shown below:
+
+![Screenshot2](RandomForestCM.png)
+
+It can be seen that there is a high rate if false negatives (>50%), which is problematic. The SVM Classifier achieves the lowest rate of false negatives (still ~33%!) but has a huge rate of false positives. See below:
+
+![Screenshot2](SVC_CM.png)
+
+Without further refinement of the model, consultation with business domain experts would be required to determine what the most suitable model would be, if any.

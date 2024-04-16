@@ -36,10 +36,27 @@ The technical details of why these were selected and how they work need not be c
 ## DATA
 
 * The dataset is available for download on Kaggle [here](https://www.kaggle.com/datasets/saurabhbadole/bank-customer-churn-prediction-dataset/data); it is made available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+* The data consists of 10,000 rows of data, ultimately reduced to nine features per row:
+  * **CreditScore:** The credit score of the customer.
+  * **Gender_Male:** Whether the customer is male (binary: yes/no).
+  * **Age:** The age of the customer.
+  * **Tenure:** The number of years the customer has been with the bank.
+  * **Balance:** The account balance of the customer.
+  * **NumOfProducts:* The number of bank products the customer has.
+  * **HasCrCard:** Indicates whether the customer has a credit card (binary: yes/no).
+  * **IsActiveMember:** Indicates whether the customer is an active member (binary: yes/no).
+  * **EstimatedSalary:** The estimated salary of the customer.
 
 ## MODEL  
 
-A summary of the model you’re using and why you chose it.
+The model selected for final use is the Random Forest Classifier. This achieved:
+
+* **Mean Cross-Validation Training F1**: 0.53926312
+* **Validation Precision**: 0.75,
+* **Validation Recall**: 0.434889435,
+* **Validation F1**: 0.55054432
+
+These figures are not ideal, but they represent the optimum balance of precision and recall that could be attained in this iteration. Further refinement of the model is required, potentially using Bayesian Optimisation to refine the choice of hyperparameters. Additional research into suitable FNN architecture refinements would also be of great interest.
 
 ## HYPERPARAMETER OPTIMSATION
 
@@ -53,14 +70,14 @@ The hyperparameters to be optimised, along with their eventual values are:
 
 As it stands, the best performing model is far from ideal. The plot below shows the comparison of F1 scores achieved in cross-validation training and hold-out validation.
 
-![Screenshot](F1_Comparison.png)
+![Screenshot](images/F1_Comparison.png)
 
 The highest achieved training F1 score was 0.539263, with a corresponding validation score of 0.550544, recorded by the Random Forest Regressor. The confusion Matrix is shown below:
 
-![Screenshot2](RandomForestCM.png)
+![Screenshot2](images/RandomForestCM.png)
 
 It can be seen that there is a high rate if false negatives (>50%), which is problematic. The SVM Classifier achieves the lowest rate of false negatives (still ~33%!) but has a huge rate of false positives. See below:
 
-![Screenshot2](SVC_CM.png)
+![Screenshot2](images/SVC_CM.png)
 
 Without further refinement of the model, consultation with business domain experts would be required to determine what the most suitable model would be, if any.

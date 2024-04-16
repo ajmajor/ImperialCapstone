@@ -22,20 +22,23 @@ See the [example Google model cards](https://modelcards.withgoogle.com/model-rep
 
 **Output:** The model returns a binary classification of whether the customer will churn
 
-**Model Architecture:** Describe the model architecture you’ve used
+**Model Architecture:** The model implemented is a Random Forest Classifier trained on 8000 rows of data with approximately 20% in the target positive class. The hyperparameter optimisation for the model yielded the following values:
+
+* **max_depth**: None
+* **n_estimators**: 100
 
 ## Performance
 
 The model is trained on the [Banking Customer Churn Prediction Dataset](https://www.kaggle.com/datasets/saurabhbadole/bank-customer-churn-prediction-dataset/data) on Kaggle. The strategy was to make an initial stratified split of 80% to train the model with a 5-fold cross-validation, and validate the model using the remaining 20% hold-out split. The metrics used to assess model performance are:
 
-* **Precision**: Proportion of true positive predictions among all positive predictions.
-* **Recall (Sensitivity)**: Proportion of actual positives correctly predicted.
-* **F1-Score**: Harmonic mean of precision and recall.
+* **Precision**: 0.75 - Proportion of true positive predictions among all positive predictions.
+* **Recall (Sensitivity)**: 0.434889435 - Proportion of actual positives correctly predicted.
+* **F1-Score**: 0.55054432 - Harmonic mean of precision and recall.
 
 ## Limitations
 
-Outline the limitations of your model.
+The low f1 score of the model means that both false positives and false negatives are quite significant; this restricts the usefulness of the model, and limits the business insights that might be gleaned from it.
 
 ## Trade-offs
 
-The model exhibits performance issues in general, due to the imbalanced nature of the training data.
+The model exhibits performance issues in general, due to the imbalanced nature of the training data. Further investigation and optimisation is required to build a more useful iteration; the best compromise of recall and sensitivity achieved stil leave many churners undetected, and better performance may well be achievable with more time. Suitable business strategies may not be identified based on the current state of the model.

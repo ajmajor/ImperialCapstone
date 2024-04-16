@@ -6,18 +6,18 @@ Submitted by: Andrew Major
 
 The idea of the project is to produce a machine learning model that will help detect customers who are likely to churn. The strategy can be simply broken down into the following steps:
 
-* **Data Collection**: Gather historical customer data, including features such as account balance, transaction frequency, customer demographics, etc.
+* **Data Collection**: Gather historical customer data, including features such as account balance, credit score, customer demographics, etc.
 * **Data Cleaning**: Handle missing values (impute or drop), remove irrelevant features, check for duplicates etc.
 * **Data Exploration**: Understand the distribution of features and identify potential outliers ('rogue values').
 
 * **Model Selection**: The following six alternative models were considered for use:
 
-* Logistic Regression
-* K-Nearest Neighbours
-* Random Forest
-* Gradient Boosting
-* Support Vector Machines
-* Neural Networks (Deep Learning)
+  * Logistic Regression Classifier
+  * K-Nearest Neighbours Classifier
+  * Random Forest Classifier
+  * Gradient Boosting Classifier
+  * Support Vector Machines Classifier
+  * Neural Networks (Deep Learning)
 
 The technical details of why these were selected and how they work need not be considered here; suffice to say that they are all good candidates for a binary classification task (i.e. predicting 'Yes' or 'No' to an outcome).
 
@@ -36,7 +36,7 @@ The technical details of why these were selected and how they work need not be c
 ## DATA
 
 * The dataset is available for download on Kaggle [here](https://www.kaggle.com/datasets/saurabhbadole/bank-customer-churn-prediction-dataset/data); it is made available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-* The data consists of 10,000 rows of data, ultimately reduced to nine features per row:
+* The data used in this model consists of 10,000 rows of data, ultimately reduced to nine features per row:
   * **CreditScore:** The credit score of the customer.
   * **Gender_Male:** Whether the customer is male (binary: yes/no).
   * **Age:** The age of the customer.

@@ -49,12 +49,12 @@ The technical details of why these were selected and how they work need not be c
 
 ## MODEL  
 
-The model selected for final use is the Random Forest Classifier. This achieved:
+The model selected for final use is the Support Vector Machine Classifier. This achieved:
 
-* **Mean Cross-Validation Training F1**: 0.53926312
-* **Validation Precision**: 0.75,
-* **Validation Recall**: 0.434889435,
-* **Validation F1**: 0.55054432
+* **Mean Cross-Validation Training F1**: 0.584659
+* **Validation Precision**: 0.483360,
+* **Validation Recall**: 0.7493857,
+* **Validation F1**: 0.587669
 
 These figures are not ideal, but they represent the optimum balance of precision and recall that could be attained in this iteration. Further refinement of the model is required, potentially using Bayesian Optimisation to refine the choice of hyperparameters. Additional research into suitable FNN architecture refinements would also be of great interest.
 
@@ -63,8 +63,9 @@ These figures are not ideal, but they represent the optimum balance of precision
 The chosen hyperparameter optimisation strategy was to use the scikit-learn GridSearchCV and RandomizedGridSearchCV functions; although this is effectively a duplication of effort, I was interested to see how well the random search compared to a full grid search, both in terms of time and optimisation results. In the end, RandomizedSearchCV seemed to hit upon the same optimisation values as the brute force search, with reduced computing overheads (confirming what had been researched online).
 The hyperparameters to be optimised, along with their eventual values are:
 
-* **max_depth**: None
-* **n_estimators**: 100
+* **kernel**: 'rbf
+* **C**: 1.00
+These are actually the default values!
 
 ## RESULTS
 
@@ -72,11 +73,7 @@ As it stands, the best performing model is far from ideal. The plot below shows 
 
 ![Screenshot](images/F1_Comparison.png)
 
-The highest achieved training F1 score was 0.539263, with a corresponding validation score of 0.550544, recorded by the Random Forest Regressor. The confusion Matrix is shown below:
-
-![Screenshot2](images/RandomForestCM.png)
-
-It can be seen that there is a high rate if false negatives (>50%), which is problematic. The SVM Classifier achieves the lowest rate of false negatives (still ~33%!) but has a huge rate of false positives. See below:
+The highest achieved training F1 score was 0.584659, with a corresponding validation score of 0.587669, recorded by the Support Vector Machine Classifier. The confusion Matrix is shown below:
 
 ![Screenshot2](images/SVC_CM.png)
 

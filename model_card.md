@@ -22,18 +22,18 @@ See the [example Google model cards](https://modelcards.withgoogle.com/model-rep
 
 **Output:** The model returns a binary classification of whether the customer will churn
 
-**Model Architecture:** The model implemented is a Random Forest Classifier trained on 8000 rows of data with approximately 20% in the target positive class. The hyperparameter optimisation for the model yielded the following values:
+**Model Architecture:** The model implemented is a Support Vector Machine Classifier trained on 8000 rows of data with approximately 20% in the target positive class. The hyperparameter optimisation for the model yielded the following values:
 
-* **max_depth**: None
-* **n_estimators**: 100
+* **kernel**: 'rbf
+* **C**: 1.00
 
 ## Performance
 
 The model is trained on the [Banking Customer Churn Prediction Dataset](https://www.kaggle.com/datasets/saurabhbadole/bank-customer-churn-prediction-dataset/data) on Kaggle. The strategy was to make an initial stratified split of 80% to train the model with a 5-fold cross-validation, and validate the model using the remaining 20% hold-out split. The metrics used to assess model performance are:
 
-* **Precision**: 0.75 - Proportion of true positive predictions among all positive predictions.
-* **Recall (Sensitivity)**: 0.434889435 - Proportion of actual positives correctly predicted.
-* **F1-Score**: 0.55054432 - Harmonic mean of precision and recall.
+* **Precision**: 0.483360 - Proportion of true positive predictions among all positive predictions.
+* **Recall (Sensitivity)**: 0.7493857 - Proportion of actual positives correctly predicted.
+* **F1-Score**: 0.587669 - Harmonic mean of precision and recall.
 
 ## Limitations
 

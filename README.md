@@ -12,12 +12,12 @@ The idea of the project is to produce a machine learning model that will help de
 
 * **Model Selection**: The following six alternative models were considered for use:
 
-* Logistic Regression
-* K-Nearest Neighbours
-* Random Forest
-* Gradient Boosting
-* Support Vector Machines
-* Neural Networks (Deep Learning)
+  * Logistic Regression Classifier
+  * K-Nearest Neighbours Classifier
+  * Random Forest Classifier
+  * Gradient Boosting Classifier
+  * Support Vector Machines Classifier
+  * Neural Networks (Deep Learning)
 
 The technical details of why these were selected and how they work need not be considered here; suffice to say that they are all good candidates for a binary classification task (i.e. predicting 'Yes' or 'No' to an outcome).
 
